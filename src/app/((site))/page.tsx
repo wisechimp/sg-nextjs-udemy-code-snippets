@@ -6,12 +6,16 @@ const HomePage = async () => {
 
   return (
     <div>
-      <h1>Home Page</h1>
-      <div className="flex justify-around p-4">
-        <p className="py-2">Snippets</p>
-        <Link href={"/snippets/new"} className="text-white bg-black px-6 py-2">New</Link>
+      <div className='flex justify-between p-4'>
+        <h1 className='text-xl font-bold'>Snippets</h1>
+        <Link
+          href={"/snippets/new"}
+          className='text-white bg-black px-6 py-2 rounded'
+        >
+          New
+        </Link>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className='flex flex-col gap-2'>
         {data.map((snippet) => {
           const { id, title } = snippet
           return (
