@@ -1,4 +1,4 @@
-import { postSnippet } from "@/app/handlers"
+import { postSnippet } from "@/actions"
 
 const NewSnippetPage = () => {
   return (

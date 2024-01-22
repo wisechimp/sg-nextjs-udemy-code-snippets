@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), but you probably managed to work that out for yourself, smart!
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), but you're pretty smart so you probably managed to work that out for yourself!
 
 ## Getting Started
 
@@ -18,6 +18,6 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 Right so this project is part of Stephen Grinder's [Next JS: The Complete Developer's Guide](https://www.udemy.com/course/next-js-the-complete-developers-guide/) which was actively updated in January 2024, (which was recent when I originally typed this!) hosted on the Udemy platform.
 
-It may be a little out of date (Next moves pretty fast!) but this guide to adding a deployed database and connecting it to the project was quite helpful as it's something I added to the project. In the course the project isn't deployed and simply employs Prisma locally:
+It may be a little out of date (Next move pretty fast!) but this guide to adding a deployed database and connecting it to the project was quite helpful as it's something I added to the project. In the course the project isn't deployed and simply employs Prisma locally:
 
 [https://vercel.com/guides/nextjs-prisma-postgres](https://vercel.com/guides/nextjs-prisma-postgres)
