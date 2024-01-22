@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { getSnippets } from "../handlers"
+import { getSnippets } from "../../actions"
 
 const HomePage = async () => {
   const data = await getSnippets()

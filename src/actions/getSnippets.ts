@@ -1,4 +1,4 @@
-import { db } from "../database"
+import { db } from "../app/database"
 
 const getSnippets = async () => {
   "use server"

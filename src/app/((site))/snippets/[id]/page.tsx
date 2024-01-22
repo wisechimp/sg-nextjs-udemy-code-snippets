@@ -1,4 +1,5 @@
-import { getSnippet } from "@/app/handlers"
+import { getSnippet } from "@/actions"
+import Link from "next/link"
 
 type SnippetPageProps = {
   params: {
@@ -9,9 +10,22 @@ type SnippetPageProps = {
 const SnippetPage = async (props: SnippetPageProps) => {
   const { id } = props.params
   const snippet = await getSnippet(parseInt(id))
-  const { title } = snippet
-  return(
-    <div>{title}</div>
+  const { title, code } = snippet
+  return (
+    <div>
+      <div className='flex m-4 justify-between items-center'>
+        <h1 className='text-xl font-bold'>{title}</h1>
+        <div className='flex gap-4'>
+          <Link href={`/snippets/${id}/edit`} className='p-2 border rounded'>
+            Edit
+          </Link>
+          <button className='p-2 border rounded'>Delete</button>
+        </div>
+      </div>
+      <pre className='p-3 border rounded bg-gray-200 border-gray-600'>
+        <code>{code}</code>
+      </pre>
+    </div>
   )
 }
 

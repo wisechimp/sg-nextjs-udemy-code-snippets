@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation"
-import { db } from "../database"
+import { db } from "../app/database"
 
 
 const postSnippet = async (formData: FormData) => {

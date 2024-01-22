@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
 
-import { db } from "../database"
+import { db } from "../app/database"
 
 const getSnippet = async (id: number) => {
   "use server"
