@@ -1,6 +1,7 @@
+import deleteSnippet from './deleteSnippet'
 import getSnippet from "./getSnippet"
 import getSnippets from "./getSnippets"
 import postSnippet from "./postSnippet"
 import updateSnippet from "./updateSnippet"
 
-export { getSnippet, getSnippets, postSnippet, updateSnippet }
+export { deleteSnippet, getSnippet, getSnippets, postSnippet, updateSnippet }

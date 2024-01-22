@@ -1,4 +1,4 @@
-import { getSnippet } from "@/actions"
+import { deleteSnippet, getSnippet } from "@/actions"
 import Link from "next/link"
 
 type SnippetPageProps = {
@@ -11,6 +11,9 @@ const SnippetPage = async (props: SnippetPageProps) => {
   const { id } = props.params
   const snippet = await getSnippet(parseInt(id))
   const { title, code } = snippet
+
+  const deleteSnippetAction = deleteSnippet.bind(null, parseInt(id))
+
   return (
     <div>
       <div className='flex m-4 justify-between items-center'>
@@ -19,7 +22,9 @@ const SnippetPage = async (props: SnippetPageProps) => {
           <Link href={`/snippets/${id}/edit`} className='p-2 border rounded'>
             Edit
           </Link>
-          <button className='p-2 border rounded'>Delete</button>
+          <form action={deleteSnippetAction}>
+            <button className='p-2 border rounded'>Delete</button>
+          </form>
         </div>
       </div>
       <pre className='p-3 border rounded bg-gray-200 border-gray-600'>
