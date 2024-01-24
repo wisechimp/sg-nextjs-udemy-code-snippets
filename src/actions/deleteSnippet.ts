@@ -1,7 +1,8 @@
 "use server"
 
-import { db } from "@/app/database"
 import { redirect } from "next/navigation"
+
+import { db } from "@/app/database"
 
 const deleteSnippet = async (id: number) => {
   await db.snippet.delete({

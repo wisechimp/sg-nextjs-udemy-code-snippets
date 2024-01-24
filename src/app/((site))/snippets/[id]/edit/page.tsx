@@ -10,11 +10,8 @@ type SnippetEditPageProps = {
 const SnippetEditPage = async (props: SnippetEditPageProps) => {
   const id = parseInt(props.params.id)
   const snippet = await getSnippet(id)
-  console.log(snippet)
-  const { title, code } = snippet
   return(
     <div>
-      Editing the snippet with title {title}.
       <SnippetEditForm snippet={snippet} />
     </div>
   )

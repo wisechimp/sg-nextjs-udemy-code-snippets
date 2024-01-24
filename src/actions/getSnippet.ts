@@ -1,13 +1,14 @@
+"use server"
+
 import { notFound } from "next/navigation"
 
 import { db } from "../app/database"
 
 const getSnippet = async (id: number) => {
-  "use server"
   const snippet = await db.snippet.findFirst({
     where: {
-      id: id
-    }
+      id: id,
+    },
   })
 
   if (!snippet) {
