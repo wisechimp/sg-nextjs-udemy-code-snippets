@@ -27,7 +27,7 @@ const SnippetPage = async (props: SnippetPageProps) => {
           </form>
         </div>
       </div>
-      <pre className='p-3 border rounded bg-gray-200 border-gray-600'>
+      <pre className='p-3 border rounded bg-gray-200 border-gray-600 overflow-auto whitespace-pre-wrap break-words'>
         <code>{code}</code>
       </pre>
     </div>
