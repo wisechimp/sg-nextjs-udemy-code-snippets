@@ -1,5 +1,7 @@
-import { deleteSnippet, getSnippet } from "@/actions"
 import Link from "next/link"
+
+import { deleteSnippet, getSnippet } from "@/actions"
+import { db } from "@/app/database"
 
 type SnippetPageProps = {
   params: {
@@ -35,3 +37,13 @@ const SnippetPage = async (props: SnippetPageProps) => {
 }
 
 export default SnippetPage
+
+export const generateStaticParams = async () => {
+  const snippets = await db.snippet.findMany()
+
+  return snippets.map((snippet) => {
+    return {
+      id: snippet.id.toString(),
+    }
+  })
+}

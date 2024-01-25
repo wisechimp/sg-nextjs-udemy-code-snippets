@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation"
 
 import { db } from "@/app/database"
+import { revalidatePath } from "next/cache"
 
 const updateSnippet = async (id: number, updatedCode: string) => {
   await db.snippet.update({
@@ -10,6 +11,7 @@ const updateSnippet = async (id: number, updatedCode: string) => {
     data: { code: updatedCode }
   })
 
+  revalidatePath(`/snippets/${id}`)
   redirect(`/snippets/${id}`)
 }
 
